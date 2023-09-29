@@ -1,0 +1,80 @@
+.error {
+    color: #e29147;
+}
+/* When referencing a class, always start with a period. All elements with the specified class will be affected with this rule*/
+
+p.error {
+    color: #9163f5;
+}
+/* When referencing a class of a specific tag, always start with the tag, a period and the class name.*/
+
+#mainContent {
+    background-color: bisque;
+}
+/* When referencing an id, always start with the hashtag (#)and the id name.*/
+
+div p {
+    font-family: "Rubik", sans-serif;
+}
+/* When referencing a child, always start with the parent tag and then the child, ...*/
+
+div .success {
+    color: coral;
+}
+/* When referencing a class child, always start with the parent tag and then the class child, ...*/
+
+a[href]
+{
+    text-decoration: line-through;
+    color: #3994e5c0;
+    font-weight: bold;
+}
+/* Reference all anchor tag with href attributes*/
+
+a[href="http://www.thenetninja.co.uk"]
+{
+    font-size: 20px;
+}
+/* Reference an anchor tag with the specified href attributes*/
+
+a[href*=".com"]
+{
+    color: #18a21a;
+}
+/* Reference anchor tags with a specific href attribute that contains the specified substring*/
+
+a[href$="uk"]
+{
+    border: 2px solid  red;
+}
+/* Reference anchor tags with a specific href attribute that ends with the specified substring*/
+
+div {
+    border: 2px dashed black;
+    padding: 17px 40px 18px 45px; /* shorthand: top, right,  bottom, left*/
+}
+
+p {
+    border: inherit;
+}
+/* A CSS rule of a parent tag will be inherited by the children*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

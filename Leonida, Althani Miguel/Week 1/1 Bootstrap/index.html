@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- This is used to render scaling properly and touch zooming for all devices-->
+        
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+         This is used to access and use bootstrap 5 css framework: https://getbootstrap.com/-->
+
+        <link href="/css/main.min.css" rel="stylesheet">
+
+        <title>Bootstrap</title>
+    </head>
+
+    <body>
+        <!-- heading tags -->
+
+        <h1>Net Ninja Pro</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+
+        <br />
+        <br />
+
+        <p class="h1">
+            This is a normal paragraph with an h1 formatting through bootstrap
+            class
+        </p>
+        <!-- Applying a style through a bootstrap class "h1" -->
+
+        <br />
+        <br />
+
+        <!-- display headings -->
+
+        <h1 class="display-1">display 1</h1>
+        <h1 class="display-2">display 2</h1>
+        <h1 class="display-6">display 6</h1>
+        <!-- display class has a bigger font size and a thinner weight in comparison to the normal heading style-->
+
+        <br />
+        <br />
+
+        <p class="display-4">
+            This is a normal paragraph with a display 4 style
+        </p>
+        <!-- display class can also be used by the <p> tag -->
+
+        <br />
+        <br />
+
+        <!-- lead text and alignment -->
+
+        <small>This is a small text.I am smaller than a regular paragraph</small>
+        <p>This is a regular paragraph without bootstrap style</p>
+
+        <p class="lead">This is a paragraph with a lead style. I am bigger!</p>
+        <!-- lead gives a slightly larger font size compared to a regular content -->
+
+        <br />
+        <br />
+
+        <p class="lead text-center">
+            I am a lead paragraph aligned in the center
+        </p>
+        <p class="lead text-end">
+            I am a lead paragraph aligned in the end/right
+        </p>
+        <p class="lead text-start">
+            I am a lead paragraph aligned in the start/left
+        </p>
+
+        <br />
+        <br />
+
+        <!-- text decoration and font weight -->
+
+        <p class="text-decoration-underline"> I am a paragraph with an underline</p>
+        <p class="text-decoration-line-through"> I am a paragraph with a line through style.</p>
+        <p class="fw-bold"> I am a paragraph with a bold font weight.</p>
+
+        <br />
+        <br />
+
+        <!-- Font Weight -->
+        <h3> Font Weight </h3>
+
+        <p >This is a normal text</p>
+        <p class="fw-bold">This is a bold text</p>
+        <p class="fw-bolder">This is a bolder text</p>
+        <p class="fw-light">This is a light text</p>
+        <!-- fw means font weight -->
+
+        <p class="fst-italic">This is a lighter text</p>
+        <!-- fst means font style -->
+
+        <p class="fw-bold fst-italic">This is a lighter text</p>
+
+        <br />
+        <br />
+
+        <!-- text colors -->
+        <h3> Text Colors </h3>
+        <p class="text-primary"> theme primary color </p>
+        <p class="text-secondary"> theme secondary color </p>
+        <p class="text-info"> theme info color </p>
+        <p class="text-warning"> theme warning color </p>
+        <p class="text-success"> theme success color </p>
+        <p class="text-danger"> theme primary color </p>
+        <p class="text-muted"> theme muted color </p>
+
+        <br />
+        <br />
+
+        <!-- background color -->
+        <h3> Background Colors </h3>
+        <p class="text-white bg-primary"> textHere </p>
+
+        <br />
+        <br />
+
+        <!-- buttons -->
+        <h3> Buttons </h3>
+        <button type="button" class="btn btn-primary">Primary</button>
+
+        <br>
+        <br>
+        
+        <!-- outline buttons -->
+        <h3> Outlined Buttons</h3>
+        <button type="button" class="btn btn-outline-success">Primary</button>
+
+        <br>
+        <br>
+        
+        <!-- buttons as link-->
+        <h3> Button as Links</h3>
+        <a href="#" class="btn btn-success">Submit</a>
+
+        <br>
+        <br>
+
+        <!-- group buttons -->
+        <h3> Button Groups</h3>
+        <div class="btn-group">
+            <a href="#" class="btn btn-primary">Button 1</a>
+            <a href="#" class="btn btn-primary">Button 1</a>
+            <a href="#" class="btn btn-primary">Button 1</a>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- Utilities -->
+        <h1 class="display-1"> Utilities </h1>
+
+        <br>
+        <br>
+
+        <!-- Margin and Padding -->
+        <h3> Margin and Padding </h3>
+
+        <div class="bg-success m-1 p-1"> small margin and padding</div>
+        <div class="bg-success m-5 p-5">large margin and padding</div>
+        <!-- m stands for margin, p stands for padding -->
+        <!-- 1 is the lowest value while 5 is the highest -->
+
+
+        <div class="bg-success my-2 mx-5 py-2 px-5 ">margin and padding for x and y axis</div>
+        <!-- y is vertical -->
+        <!-- x is horizontal -->
+
+        <div class="bg-success mt-1 mb-2 ms-3 me-4 pt-1 pt-2 ps-3 ps-4">margin and padding for each direction</div>
+        <!-- t is top -->
+        <!-- b is bottom -->
+        <!-- s is start/left -->
+        <!-- e is end/right -->
+
+        <br>
+        <br>
+
+        <!-- Borders -->
+        <h3> Borders </h3>
+
+        <div class="m-3 p-3 border">Default Border</div>
+        <div class="m-3 p-3 border-top border-end">Individual Border</div>
+        <div class="m-3 p-3 border-bottom border-success">Colored Bottom Border</div>
+
+        <div class="m-3 p-3 border-top border-success border-5">Colored Top Border with weight</div>
+        <!-- border-1 is the thinnest while border-5 is the thickest -->
+
+        <div class="m-3 p-3 rounded border border-success border-4">Colored Rounded Top Border</div>
+        <!-- rounded border gives a slight border radius for the container-->
+        <!-- the "border" after rounded makes the border visible-->
+
+        <div class="m-3 p-3 rounded-pill bg-info border-info border-4">Pill-Like Border</div>
+        <!-- rounded-pill gives as a pill-like border radius -->
+
+        <div class="m-3 p-3 shadow">Colored Bottom Border</div>
+        <div class="m-3 p-3 shadow-sm">Colored Bottom Border</div>
+        <!-- sm stands for small and it creates a more transparent shadow -->
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- Containers -->
+        <h1 class="display-1"> Containers </h1>
+
+        <div class="container my-5">
+            <h2> Regular Container </h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos enim perspiciatis. Cum enim dolorum, laudantium expedita aut amet itaque voluptate laboriosam dicta dolores sapiente eveniet labore velit minima repellendus.</p>
+        </div>
+        <!-- regular container is affected by breakpoints  -->
+
+        <div class="container-fluid">
+            <h2> Fluid Container </h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos enim perspiciatis. Cum enim dolorum, laudantium expedita aut amet itaque voluptate laboriosam dicta dolores sapiente eveniet labore velit minima repellendus.</p>
+        </div>
+                <!-- Fluid container is not affected by breakpoints as its width is always 100%-->
+
+        <div class="container-lg my-5">
+            <h2> Container-LG </h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos enim perspiciatis. Cum enim dolorum, laudantium expedita aut amet itaque voluptate laboriosam dicta dolores sapiente eveniet labore velit minima repellendus.</p>
+        </div>
+                <!-- LG container's width will always be 100% and is not affected by breakpoints until its threshold of 960px-->
+                
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- Grid System -->
+        <!-- Grid always goes inside a container  -->
+        <h1 class="display-1"> Grid System </h1>
+
+        <div class="container-lg my-5 ">
+            <h2> basic grid </h2>
+            <div class="row">
+                <div class="col">
+                    <div class="p-5 bg-success text-light">col 1</div>
+                </div>
+                <div class="col">
+                    <div class="p-5 bg-success text-light">col 2</div>
+                </div>
+                <div class="col">
+                    <div class="p-5 bg-success text-light">col 3</div>
+                </div>
+            </div>
+        </div>
+        <!-- A basic grid let each of the "div-columns" take up equal number of columns. If there are three, each "div-columns" will take up 4 columns-->
+
+
+        <div class="container-lg my-5">
+            <h2> column widths </h2> 
+            <div class="row">
+                <div class="col-6">
+                    <div class="p-5 bg-success text-light">col 1</div>
+                </div>
+                <!-- col-6 means this "div-column" will take up 6 columns -->
+                <div class="col-3">
+                    <div class="p-5 bg-success text-light">col 2</div>
+                </div>
+                <div class="col-3">
+                    <div class="p-5 bg-success text-light">col 3</div>
+                </div>
+            </div>
+        </div>
+        <!-- To specify how many columns a "div-column" takes, use the class "col-<value>". Just make sure all column values will add up to 12.  -->
+
+
+        <div class="container-lg my-5">
+            <h2> responsive column widths </h2>
+            <div class="row">
+                <div class="col-sm-4 col-lg-6">
+                    <div class="p-5 bg-success text-light">col 1</div>
+                </div>
+                <!-- col-sm-4 means if the display is in mobile, the "div-column" will just take 4 columns. -->
+                <!-- col-lg-6 means if the display is in large screen, the "div-column" will just take 6 columns. -->
+                <div class="col-sm-4 col-lg-3">
+                    <div class="p-5 bg-success text-light">col 2</div>
+                </div>
+                <div class="col-sm-4 col-lg-3">
+                    <div class="p-5 bg-success text-light">col 3</div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="container-lg my-5">
+            <h2> justifying columns </h2>
+            <div class="row justify-content-center"> <!-- Used to justify the content -->
+                <div class="col-md-3"> <!-- md means medium breakpoint. When the screen reaches its breakpoint, the "div-column" will take up 3 columns -->
+                    <div class="p-5 bg-primary text-light">col 1</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-5 bg-primary text-light">col 2</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-5 bg-primary text-light">col 3</div>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- Tabs -->
+        <h1 class="display-1"> Tabs </h1>
+
+        <div class="container my-5">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" aria-selected="true">
+                        Home
+                    </button>
+                    <!-- first tab -->
+
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" aria-selected="true">
+                        Profile
+                    </button>
+                    <!-- first tab -->
+
+                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" aria-selected="true">
+                        Contact
+                    </button>
+                    <!-- first tab -->
+
+                </div>
+            </nav>
+
+            <div class="tab-content m-1" id="nav-tabContent">
+                
+                <div class="tab-pane fade show active p-3" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <h2> Home </h2>
+                    <p class=" m-1 ">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quidem voluptas accusantium excepturi, assumenda quia repellat quibusdam minima exercitationem enim consequatur, ipsum fugit neque officia laboriosam itaque saepe quas qui!
+                    </p>
+                </div>
+                
+                <div class="tab-pane fade active p-3" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <h2> Profile </h2>
+                    <p class=" m-1 ">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quidem voluptas accusantium excepturi, assumenda quia repellat quibusdam minima exercitationem enim consequatur, ipsum fugit neque officia laboriosam itaque saepe quas qui!
+                    </p>
+                </div>  
+
+                <div class="tab-pane fade active p-3" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <h2> Contact </h2>
+                    <p class=" m-1 ">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quidem voluptas accusantium excepturi, assumenda quia repellat quibusdam minima exercitationem enim consequatur, ipsum fugit neque officia laboriosam itaque saepe quas qui!
+                    </p>
+                </div> 
+
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+        <!-- This is used to access bootstrap 5 JavaScript: "https://getbootstrap.com/"-->
+    </body>
+</html>

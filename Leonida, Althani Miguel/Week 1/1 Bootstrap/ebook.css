@@ -1,0 +1,59 @@
+section {
+    border: 1px solid rgb(79, 65, 185);
+    padding: 60px 0;
+}
+/* all sections tags will have this css rule */
+
+#navIntro {
+    border: 1px solid rgb(133, 123, 227);
+
+}
+
+
+nav {
+    border: 1px solid rgb(79, 65, 185);
+}
+
+span {
+    border: 1px solid rgb(233, 76, 149);
+}
+
+div.container-lg {
+    border: 1px solid rgb(226, 139, 151);
+}
+
+div #introRow {
+    border: 1px solid rgb(44, 194, 36);
+}
+
+div {
+    border: 1px solid rgb(197, 117, 117);
+}
+
+p {
+    border: 1px solid rgb(218, 119, 119);
+}
+
+a {
+    border: 1px solid rgb(218, 119, 119);
+}
+
+img {
+    border: 1px solid rgb(218, 119, 119);
+}
+
+h2 {
+    border: 1px solid rgb(218, 119, 119);
+}
+
+h4 {
+    border: 1px solid rgb(218, 119, 119);
+}
+
+form {
+    border: 1px solid rgb(218, 119, 119);
+}
+
+label {
+    border: 1px solid rgb(218, 119, 119);
+}

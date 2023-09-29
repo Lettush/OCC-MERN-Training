@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>HTML Forms</h1>
+
+        <form>
+            <label for="username"> Enter username:</label>
+            <input type="text" id="username" placeholder="althani.leonida"/>
+            <!-- for is used to connect an element to another element -->
+            <!-- id is used as a unique identifier used as a reference -->
+            <!-- input is used for data entry -->
+            <!-- placeholder is used to provide an example text -->
+
+            <br />
+            <br />
+
+            <label for="email"> Enter email:</label>
+            <input type="email" id="email" placeholder="althani.leonida@gmail.com"/>
+
+            <br />
+            <br />
+
+            <label for="password"> Enter password:</label>
+            <input type="password" id="password" />
+
+        <br />
+        <br />
+
+        <p>Select your age:</p>
+        <input type="radio" name="age" value="0-25" id="age1" />
+        <label for="age1">0-25</label>
+
+        <br />
+        <br />
+
+        <input type="radio" name="age" value="26-50" id="age2" />
+        <label for="age2">26-50</label>
+
+        <br />
+        <br />
+
+        <input type="radio" name="age" value="51+" id="age3" />
+        <label for="age3">51+</label>
+
+        <br />
+        <br />
+
+        <label for="question">Security Question: </label>
+        <select name="question" id="question">
+            <option value="q1">What is the name of your mother?</option>
+            <option value="q2">What is the name of your father?</option>
+            <option value="q3">What is the name of your sister?</option>
+        </select>
+
+        <br />
+        <br />
+
+        <label for="answer"> Answer: </label>
+        <input type="text" id="answer" />
+
+        <br />
+        <br />
+
+        <label for="bio">Your Bio:</label>
+
+        <br />
+
+        <textarea id="bio" cols="45" rows="10" placeholder="about you..." ></textarea>
+        <!-- textarea is used for multi-line text entry -->
+        <!-- rows and cols are its attrib that specifies its default size -->
+        
+        <br />
+        <br />
+
+            </form>
+    </body>
+</html>

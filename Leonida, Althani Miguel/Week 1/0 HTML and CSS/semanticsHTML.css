@@ -1,0 +1,248 @@
+body,
+ul,
+li,
+h1,
+h2,
+a {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+/* css reset.  eliminate inconsistencies in default styling*/
+
+body {
+    
+}
+
+header {
+    background-color: #ec421d;
+    padding: 26px 0px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1; /* This is used to arrange the "layering" of an element, moving an element forward or backward. Because the position is fixed, without the z-index, this element will be covered by element next to it*/
+    top: 0;
+    left: 0;
+    right: 58;
+}
+
+header h1 {
+    display: inline-block; /* a width that takes up as much as as necessary while still capable of setting padding and  margin for all sides */
+    color: white;
+    border: 7px solid white;
+    padding: 8px 15px;
+    border-radius: 40px;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img {
+    max-width: 100%;
+    vertical-align: bottom; /* prevents whitespace below the image */
+}
+
+.banner .welcome {
+    background-color: #feaa12;
+    width: 23%;
+    color: white;
+    padding: 73px;
+    position: absolute; /* Element is removed from the normal flow and loses its initial space */
+    left: 0;
+    top: 35%; /* percentage is used to make this element adjust relative to its parent. pixel does not adjust */
+}
+/* element's parent is the element with .banner class */
+
+.banner h2 {
+    font-size: 75px;
+}
+/* This refers to the h2 banner "Welcome to Marioclub" */
+
+.banner h2 span {
+    font-size: 1.2em; /* em takes the parent measurement and multiplies it by its value (1.2) */
+}
+/* This refers to the inline element Marioclub within the h2 banner "Welcome to Marioclub" */
+
+nav {
+    position: sticky; /* best practice to use this to containers */
+    top: 118px;
+    background-color: lightgray;
+    z-index: 1; /* prevents the images to cover the navigation bar when hovered */
+}
+/* refers to the navigation semantic of the html */
+
+nav ul {
+    white-space: nowrap; /* Prevents line break for all of the element's content (list options). The content will stay on a single line, and any overflow will cause overflow behavior,*/
+    max-width: 1200px; /* max-width with px sets a specific width measurement*/
+    margin: 0 auto;
+    /* the auto value automatically distribute any available horizontal space evenly between the left and right margins of the element.*/
+}
+/* refers to the unordered list */
+
+nav li {
+    padding: 20px 10px;
+    display: inline-block;
+    text-align: center;
+    width: 25%;
+    font-size: 20px;
+}
+/* refers to the list options of the unordered list */
+
+nav li a {
+    text-decoration: none;
+    color: dimgray;
+    padding-bottom: 3px;
+}
+/* refers to the anchor of the list option, styling specigically the links of the menu */
+
+nav li a.joinNav {
+    color: #e76215;
+}
+/* refers to a specifc anchor of the list option with a class name of "join" */
+
+main {
+    border: 1px dashed #e6e6ff;
+    max-width: 100%; /*  This instructs the <main> element to have a maximum width of 100% of its containing parent's width (<body>).  */
+    width: 1239px; /* width of the children will adhere in relation to this measurement */
+    margin: 80px auto;
+    padding: 0 40px;
+    box-sizing: border-box; /* this is used so contents will remain on the page without taking additional space where users need to scroll  */
+}
+/* refers to the main HTML semantic */
+
+article h2 {
+    color: #ec421d;
+    font-size: 48px;
+}
+/* refers to the article's headline "It's me, Mario" */
+
+article p {
+    line-height: 2em; /* em takes the font size measurement of p tag and multiplies it by its value (1.2) */
+    color: dimgray;
+}
+/* refers to the paragraph within the article tag */
+
+.images {
+    border: 1px dashed #e4e4ff;
+    text-align: center;
+    margin: 80px 0;
+    white-space: nowrap;
+}
+/* refers to the element with a class name of "images" */
+
+.images li {
+    border: 1px dashed #f4dada;
+    display: inline-block;
+    width: 40%; /* this adjust the width measurement to cover the whole space */
+    margin: 20px 5%;
+}
+/* refers to the list of options under the unordered list with a class name of "images" */
+
+.images li img {
+    max-width: 100%; /* used to inherit the width of the li eleemnt as by default, the image size takes the original size */
+}
+/* refers to the img attribute of the list options under the unordered list with a class name of "images" */
+
+.join {
+    background: #f3f3f3;
+    text-align: center;
+    padding: 60px 20px;
+}
+/* refers to the element with a class name of "join" */
+
+.join h2 {
+    font-size: 38px;
+}
+/* refers to the heading of a section with a class name "join" */
+
+form input {
+    color: #323a43;
+    margin: 15px 0;
+    padding: 10px;
+    font-size: 17px;
+    width: 20%;
+    text-align: center;
+    border-radius: 30px;
+    border: 4px solid white;
+}
+/* refers to the email text field */
+
+footer {
+    position: absolute; /* prevents a whitespace below footer */
+    width: 100%;
+    background: #ec421d;
+    color: white;
+    padding: 7px 0;
+    text-align: center;
+}
+/* refers to the footer semantic*/
+
+/* pseudo classes */
+
+nav li a:hover{
+    /*text-decoration: underline;*/
+    border-bottom: 2px solid gray;
+}
+/* when hovered, the bottom border becomes visible. 
+ * this is used create a space illusion between the underline and the word by taking advantage of the padding*/
+
+.images li:hover{
+    position: relative;
+    top: -6px;
+}
+/* gives an animation where when hovered, the position moves the list option vertically, upwards */
+
+form input:focus{
+    outline: none;
+    border: 2px dashed #6b6868;
+}
+/* when text field is active, it will show a dashed border */
+
+form input:valid{
+    border: 2px solid #8dd68d;
+}
+/* if the data types is valid, it will show a green border */
+
+article p::first-line {
+    font-size: 1.2em;
+}
+
+section.join p::first-letter{
+    font-size: 1.5em;
+}
+
+p::selection{
+    background-color: #ec421d;
+    color: white;
+}
+
+footer ::after{
+    content: ' ©'
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
