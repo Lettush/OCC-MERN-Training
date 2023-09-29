@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!-- prevents "Â " -->
+        <title>Marioclub</title>
+        <link rel="stylesheet" href="semanticsHTML.css" />
+         
+    </head>
+       
+    <body>
+        <header>
+            <h1>Marioclub</h1>
+        </header>
+        <!--  Container for elements that provide context or branding for the page or section.  Usually placed at the top of the webpage. It may contain navigation links but it's not primarily used for it. -->
+
+        <section class="banner">
+            <img src="img/banner.png" alt="Marioclub" />
+            <div class="welcome">
+                <h2>Welcome to <br /><span>Marioclub</span></h2>
+            </div>
+        </section>
+        <!-- It is a a standalone container unit used to group together content that is thematically related.  -->
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/join.html" class="joinNav"><strong>Join the Club!</strong></a></li>
+                <li><a href="/news.html">Latest News</a></li>
+                <li><a href="/games.html">New Games</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- A block of content that contains navigation options for users. Typically placecd within the header section but can also be placed anywhere in the webpage. -->
+
+        <main>
+            <article>
+                <h2>It's me, Mario!</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    euismod, libero quis cursus lacinia, odio dui facilisis
+                    ante, non vestibulum dolor massa in libero. Vivamus
+                    vestibulum volutpat turpis, nec cursus neque iaculis id.
+                    Fusce convallis nunc vitae aliquam. Aenean ullamcorper, odio
+                    eu hendrerit cursus, justo tortor vehicula justo, eu
+                    scelerisque metus turpis in lorem. Maecenas euismod ex eget
+                    venenatis.
+                </p>
+            </article>
+            <!-- A self-contained content that make sense on its own. Used for news articles, blog posts, forum posts, product descriptions, or any content that forms an independent unit. -->
+
+            <ul class="images">
+                <li><img src="img/thumb-1.png" alt="mario thumb 1" /></li>
+                <li><img src="img/thumb-2.png" alt="mario thumb 2" /></li>
+            </ul>
+        </main>
+        <!-- Used to define the most important part of the webpage which typically contains the primary content that users are interested in-->
+
+        <section class="join">
+            <h2>Join Today!</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                euismod, libero quis cursus lacinia, odio dui facilisis ante,
+                non vestibulum dolor massa in libero.
+            </p>
+            <form>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="What's your email address?"
+                    required />
+            </form>
+        </section>
+
+        <footer>
+            <p class="copyright">Copyright 2019 Marioclub</p>
+        </footer>
+        <!-- Contains information about the page, such as copyright notices, contact information, links to related pages, and other footer-related content. --> 
+    </body>
+</html>

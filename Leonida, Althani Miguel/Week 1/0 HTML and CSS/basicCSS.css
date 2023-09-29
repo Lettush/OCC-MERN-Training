@@ -1,0 +1,57 @@
+h1 {
+    color: green;
+    background-color: bisque;
+    font-size: 30px;
+    text-decoration: underline;
+    font-family: "Rubik", sans-serif; /* Google Fonts */
+    text-align: center;
+}
+
+p {
+    color: slategray;
+    text-align: justify;
+    line-height: 23px; /*Specify the space between lines*/
+    letter-spacing: -2px; /*Specify the space between lines*/
+    column-count: 3; /*divides content into columns*/
+    column-gap: 48px; /* specifies the gap measurement of the column count */
+}
+
+ul {
+    /*
+    border-width: 14px;
+    border-style: solid; 
+    border-color: #2f314f;
+    */
+    border: 11px solid #00ffa0; /* border shorthand: width stye color */
+    
+}
+
+li{
+    list-style-type: square; /* Specifies the bullet figure of a list option*/
+    text-shadow: 12px 3px #b6b6b6;
+}
+
+span {
+    display: inline;
+    margin: 16px; /* Inline elements will only have margin on the left and right side */
+}
+
+div{
+    /* display: inline; /* <div> will flow within the content alongside other inline elements and will not start on a new line as they only take up as much width as necessary for their content. */
+    display: block; /* content used the whole width  */
+    border: 2px solid red;
+    margin: 14px; /* space outstide the div. Block level elements will have margins of all sides*/
+    padding: 12px; /* space inside the div */
+}
+
+
+
+
+
+
+
+
+
+
+
+
