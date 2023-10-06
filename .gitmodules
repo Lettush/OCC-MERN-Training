@@ -1,0 +1,12 @@
+[submodule "Leonida, Althani Miguel/Week 2/bootstrap"]
+	path = Leonida, Althani Miguel/Week 2/bootstrap
+	url = https://github.com/guelleonship/bootstrap.git
+[submodule "Leonida, Althani Miguel/Week 2/todoList"]
+	path = Leonida, Althani Miguel/Week 2/todoList
+	url = https://github.com/guelleonship/todoList.git
+[submodule "Leonida, Althani Miguel/Week 2/jsCalculator"]
+	path = Leonida, Althani Miguel/Week 2/jsCalculator
+	url = https://github.com/guelleonship/jsCalculator.git
+[submodule "Leonida, Althani Miguel/Week 2/mongoDB"]
+	path = Leonida, Althani Miguel/Week 2/mongoDB
+	url = https://github.com/guelleonship/mongoDB.git
