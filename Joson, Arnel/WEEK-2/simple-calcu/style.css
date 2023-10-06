@@ -1,0 +1,60 @@
+.container {
+    max-width: 500px;
+    margin: 80px auto 0 auto;
+    box-shadow: 0px 0px 50px 20px gray;
+    justify-content: center;
+    align-content: center;
+}
+
+body {
+    background: wheat;
+}
+
+body h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+
+
+#display {
+    text-align: right;
+    height: 80px;
+    line-height: 80px;
+    padding: 20px 10px;
+    font-size: 30px;
+}
+
+.buttons {
+    display: grid;
+    border-bottom: 1px solid gold;
+    border-left: 1px solid gold;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+
+div .buttons{
+    border-top: 1px solid gold;
+    border-right: 1px solid gold;
+}
+
+.button {
+    border: 0.5px solid gold;
+    line-height: 100px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#equal {
+    background-color: blue;
+    
+    
+}
+
+.button:hover {
+    background-color: crimson;
+    color: silver;
+    transition: 0.5s ease-in-out;
+}
