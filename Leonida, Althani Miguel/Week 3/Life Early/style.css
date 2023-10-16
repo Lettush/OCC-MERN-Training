@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.appName {
+    font-size: 30px;
+}
+
+.appDescription {
+    font-size: large;
+    color: rgb(170, 170, 170);
+}
+
+section {
+    border-radius: 10px;
+    background-color: rgb(35, 35, 45);
+    border: 2px solid rgb(55, 55, 65) !important;
+}
+
+.divHeaders {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.divHeaders h5 {
+    color: rgb(45, 200, 235);
+}
+
+.divHeaders p {
+    margin: 0;
+    font-size: 75%;
+}
+
+.divForms .form-control {
+    background: rgb(40, 40, 50);
+    color: rgb(45, 200, 235);
+    border: 2px solid rgb(60, 60, 70) !important;
+}
+
+.divForms textarea {
+    height: 125px;
+    resize: none;
+}
+
+.divForms .form-control:focus {
+    border: 2px solid rgb(45, 200, 235) !important;
+}
+
+button[type="submit"] {
+    font-size: 80%;
+}
+
+.divTable table {
+    background-color: rgb(40, 40, 50) !important;
+}
+
+.divTable table,
+.divTable tr {
+    border-bottom: 2px solid rgb(60, 60, 70) !important;
+}
+
+.tblHeaders {
+    font-weight: 400;
+    border-radius: 7px 7px 0 0;
+    background-color: rgb(25, 25, 35) !important;
+}
+
+.divTable tbody tr td {
+    color: rgb(230, 230, 230);
+    background: rgb(40, 40, 50);
+}
+
+.btnIcons {
+    font-size: 20px;
+    padding: 5px 10px !important;
+}
+
+.hiddenHeader {
+    display: none;
+}
