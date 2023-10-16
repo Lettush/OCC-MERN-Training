@@ -1,0 +1,21 @@
+//custom values
+$primary: rgb(39, 193, 205);
+//$light: rgb(238, 254, 255);
+
+// import functions and variables for adding custom map colors
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$custom-theme-colors: (
+    "customOne": rgb(240, 222, 131),
+    "customTwo": rgb(238, 254, 255)
+);
+
+//merging custom colors and theme colors maps
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+//import bootstrap
+//default values
+@import '../node_modules/bootstrap/scss/bootstrap';
+
