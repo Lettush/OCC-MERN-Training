@@ -18,6 +18,6 @@ const workoutSchema = new Schema(
             type: Number,
             requried: true
         }
-    }, {timestaps: true}) //timestaps would generate the time when he document was created
+    }, {timestamps: true}) //timestamps would generate the time when the document was created
 
     module.exports = mongoose.model('Workout',workoutSchema);
