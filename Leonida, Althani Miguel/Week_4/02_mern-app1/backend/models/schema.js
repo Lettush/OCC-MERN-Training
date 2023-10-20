@@ -20,6 +20,10 @@ const workoutSchema = new Schema(
         load: {
             type: Number,
             requried: true
+        },
+        user_id : {
+            type: String,
+            required: true
         }
     }, { timestamps: true }) //timestamps would generate the time when the document was created
 
