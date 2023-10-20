@@ -1,10 +1,30 @@
+//This file is for routes. This serve as a manager that redirects http request to their designated route handles. 
+
+
+//To use express related-functionality.
 const express = require("express");
 
-//This is done so the module createWorkout can be used in this file
-//arguents are modules/functions from controller.js.
-const {createWorkout,getWorkouts, getWorkout, deleteWorkout, updateWorkout} = require('../controllers/controller');
 
+//Imported functions from controller.js module.
+const {
+
+    createWorkout,
+    getWorkouts,
+    getWorkout,
+    deleteWorkout,
+    updateWorkout
+
+} = require('../controllers/controller');
+
+
+//require auth for all workout routes
+const requireAuth = require('../middleware/requireAuth')
+
+
+//An express-related functionality that allows us to use Express Router objects (.get, .delete, .post, .patch)
 const router = express.Router()
+
+router.use(requireAuth)
 
 //GET all workouts
 router.get('/', getWorkouts);
@@ -13,7 +33,7 @@ router.get('/', getWorkouts);
 router.get('/:id', getWorkout);
 
 //POST a new workout
-router.post('/', createWorkout); //createWorkout is a function from controller.js
+router.post('/', createWorkout);
 
 //DELETE a new workout
 router.delete('/:id', deleteWorkout);

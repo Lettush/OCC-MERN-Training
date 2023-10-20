@@ -1,5 +1,14 @@
-const Workout = require("../models/schema");
+//This file contains the functions for handling HTTP requests
+
+
+//From schema.js module
+//To load a data model or schema used to reference for the CRUD functions
+const Workout = require("../models/schema"); 
+
+
+//To use mongoose functionalities
 const mongoose = require('mongoose');
+
 
 //get all workout document
 const getWorkouts = async (req,res) => {
@@ -10,8 +19,12 @@ const getWorkouts = async (req,res) => {
 
 //get a single workout document
 const getWorkout = async (req,res) => {
-    const {id} = req.params; //this is done as this function affects one document via id. it is also stated in workouts.js ('/:id', (req,res))
     
+    //this is done as this function affects one document via id. it is also stated in workouts.js ('/:id', (req,res))
+    //extract the value of the id variable the req.params object and assign it in our id variable
+    const {id} = req.params; 
+    
+
     //this code validates the object id used
     if (!mongoose.Types.ObjectId.isValid(id)) {
         return res.status(404).json({error: 'No such workout'});
@@ -29,10 +42,17 @@ const getWorkout = async (req,res) => {
 
 //create new workout document
 const createWorkout = async (req,res) => {
+    
+   
+    //extracts title, load, and reps values from req.body object and contain it in these variables
     const {title,load,reps} = req.body;
+    
 
+    //an array to store the field names that has  missing data
     let emptyFields = [];
 
+    
+    //checks whether the fields has missing data. if it has, the field name is inserted in the emptyFields array by adding their corresponding name in string type
     if(!title) {
         emptyFields.push('title');
     }
@@ -42,6 +62,9 @@ const createWorkout = async (req,res) => {
     if(!reps) {
         emptyFields.push('reps');
     }
+
+
+    //checks if there are any field names in the emptyFields array. if it has, an error message will be displayed
     if(emptyFields.length > 0) {
         return res.status(400).json({error: "Please fill in all the fields",emptyFields})
     }
@@ -57,16 +80,22 @@ const createWorkout = async (req,res) => {
     }
 }
 
+
 //delete a workout document
 const deleteWorkout = async (req,res) => {
 
-    const {id} = req.params; //this is done as this function affects one document via id. it is also stated in workouts.js ('/:id', (req,res))
+    
+    //this is done as this function affects one document via id. it is also stated in workouts.js ('/:id', (req,res))
+    //extract the value of the id variable the req.params object and assign it in our id variable
+    const {id} = req.params; 
+
 
     //this code validates the object id used
     if (!mongoose.Types.ObjectId.isValid(id)) {
         return res.status(404).json({error: 'No such workout'});
     }
 
+    //{_id:id} : specific way of locating a document
     const workout = await Workout.findOneAndDelete({_id: id});
 
     if (!workout) {
@@ -78,21 +107,27 @@ const deleteWorkout = async (req,res) => {
 
 }
 
-//update a workout document
 
+//update a workout document
 const updateWorkout = async (req,res) => {
 
-    const {id} = req.params; //this is done as this function affects one document via id. it is also stated in workouts.js ('/:id', (req,res))
+    
+    //this is done as this function affects one document via id. it is also stated in workouts.js ('/:id', (req,res))
+    //extract the value of the id variable the req.params object and assign it in our id variable
+    const {id} = req.params; 
 
+    
     //this code validates the object id used
     if (!mongoose.Types.ObjectId.isValid(id)) {
         return res.status(404).json({error: 'No such workout'});
     }
 
-    const workout = await Workout.findOneAndUpdate({_id: id}, {
-        ...req.body
-    })
+    
+    //{_id: id} : used to locate the document
+    //{...req.body} : the data the contains the update
+    const workout = await Workout.findOneAndUpdate({_id: id}, {...req.body})
 
+  
     if (!workout) {
         return res.status(404).json({error: "No such workout"});
     }
@@ -101,6 +136,7 @@ const updateWorkout = async (req,res) => {
 } 
 
 //This is done for other files to use createWorkout module
+//Used by workouts.js module
 module.exports = {
     createWorkout,
     getWorkout,
