@@ -5,15 +5,13 @@ const addTaskInput = document.getElementById("taskInput");
 //access ul tag
 const ulTask = document.getElementById("taskList");
 
-
-
 //access add task button
 const addTaskButton = document.querySelector("button");
 
+
+
 //add event listener to button
 addTaskButton.addEventListener("click", addTask)
-
-
 
 //add event listener to the UL tag 
 ulTask.addEventListener("click", deleteTask);
