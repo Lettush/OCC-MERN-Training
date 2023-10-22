@@ -21,13 +21,13 @@ const displayUserData = async () => {
 
             //Generate the cards
             html += `
-            <div class="col-2">
-                <div class="card h-100">
+            <div class="col-3">
+                <div class="card">
                     <div class="card-body d-flec flex-column">
                     <img src=${item.image} class="img-fluid">
                     <h6 class="card-title"> ${item.title}</h5>
                     
-                    <h6 class="card-subtitle mb-2 text-muted"> ${item.price} </h6>
+                    <h6 class="card-subtitle mb-2 text-muted"> $ ${item.price} </h6>
 
                     <p class="card-text"> ${item.description} </p>
                     </div>
