@@ -1,6 +1,12 @@
+
 //access modules
 const userRoute = require("./routes/user")
 const authRoute = require("./routes/auth")
+const productRoute = require("./routes/product")
+const cartRoute = require("./routes/cart")
+const orderRoute = require("./routes/order")
+
+
 
 //access express functionalities
 const express = require("express"); 
@@ -36,11 +42,21 @@ mongoose.connect(process.env.DATABASE_URL)
 //allows handling of JSON
 app.use(express.json());
 
-//middleware : responsible for registering new accounts
+//middleware : registering and logging in accounts
 app.use("/api/auth", authRoute);
 
 //middleware : functions that can access the request and response objects 
 app.use("/api/users", userRoute);
+
+//middleware : CRUD for products
+app.use("/api/products", productRoute);
+
+//middleware : CRUD for cart
+app.use("/api/carts", cartRoute);
+
+//middleware : CRUD for order
+app.use("/api/orders", orderRoute);
+
 
 
 
