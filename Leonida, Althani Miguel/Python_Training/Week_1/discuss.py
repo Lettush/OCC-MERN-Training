@@ -310,7 +310,19 @@
 
 
 
-# print("\n")
+print("\n")
+
+
+
+import random
+
+#Generate a random number between 1 and 100
+secret_number = random.randrange(1,100)
+
+print(secret_number)
+
+
+
 
 
 
