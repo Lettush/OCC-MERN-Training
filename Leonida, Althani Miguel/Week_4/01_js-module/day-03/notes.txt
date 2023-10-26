@@ -1,0 +1,10 @@
+Step 1 : Open the folder where the application will be placed. 
+Step 2 : Open terminal: npm init -y
+Step 3 : Open terminal: npm install express
+Step 4 : Create app.js
+Step 5 : Go to package.json and update "main" field
+Step 6 : Open terminal: npm install nodemon
+Step 7 : Go to package.json and under scripts, type this: 
+        "start": "node app.js",
+        "dev": "nodemon app.js"
+Step 8 : To access the command in terminal: npm run <savedScript>
