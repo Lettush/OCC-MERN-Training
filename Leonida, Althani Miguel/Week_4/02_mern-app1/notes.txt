@@ -1,19 +1,18 @@
 Salt Iteration
 
 Iteration 1:
-
 Salt: "abcd1234"
 Password: "mypassword"
 Combine Salt and Password: "abcd1234mypassword"
 Hash the Combined Value (e.g., using a hash function like bcrypt): "h1a1s2h3e4d5"
-Iteration 2:
 
+Iteration 2:
 Salt: "abcd1234"
 Password: "h1a1s2h3e4d5" (the hash from the previous iteration)
 Combine Salt and Password: "abcd1234h1a1s2h3e4d5"
 Hash the Combined Value: "p2a2s3s4w5o6r7d8"
-Iteration 3:
 
+Iteration 3:
 Salt: "abcd1234"
 Password: "p2a2s3s4w5o6r7d8" (the hash from the previous iteration)
 Combine Salt and Password: "abcd1234p2a2s3s4w5o6r7d8"
