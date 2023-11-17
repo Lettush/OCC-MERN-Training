@@ -3,6 +3,11 @@ from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.utils import timezone
 from .models import Person
+from django.views.generic.edit import CreateView, UpdateView
+
+from .forms import PersonForm
+from .models import Person
+
 
 # Create your views here.
 
@@ -31,6 +36,18 @@ class PersonListView(ListView):
 class PersonDetailView(DetailView):
     model = Person
     template_name = "myapp/person_detail.html"
+
+class PersonCreateView(CreateView):
+    model = Person
+    form_class = PersonForm
+    template_name = "myapp/person_create.html"
+    success_url = "/"
+
+class PersonUpdateView(UpdateView):
+    model = Person
+    form_class = PersonForm
+    template_name = "myapp/person_update.html"
+    success_url = "/"
 
     
 """
