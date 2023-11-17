@@ -3,7 +3,7 @@ from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.utils import timezone
 from .models import Person
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from .forms import PersonForm
 from .models import Person
@@ -48,6 +48,11 @@ class PersonUpdateView(UpdateView):
     form_class = PersonForm
     template_name = "myapp/person_update.html"
     success_url = "/"
+
+class PersonDeleteView(DeleteView):
+    model = Person
+    template_name = "myapp/person_delete.html"
+    success_url = "/" 
 
     
 """

@@ -20,7 +20,7 @@ from myapp.views import PersonListView, PersonDetailView
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.static import static
-from myapp.views import PersonListView, PersonDetailView, PersonCreateView, PersonUpdateView
+from myapp.views import PersonListView, PersonDetailView, PersonCreateView, PersonUpdateView, PersonDeleteView
 
 
 urlpatterns = [
@@ -28,7 +28,8 @@ urlpatterns = [
     path('', PersonListView.as_view(), name="person_list_view"),
     path('<int:pk>', PersonDetailView.as_view(), name="person_detail_view"),
     path('create/', PersonCreateView.as_view(), name="person_create_view"),
-    path('<int:pk>/update', PersonUpdateView.as_view(), name="person_update_view")
+    path('<int:pk>/update', PersonUpdateView.as_view(), name="person_update_view"),
+    path('<int:pk>/delete', PersonDeleteView.as_view(), name="person_delete_view")
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
