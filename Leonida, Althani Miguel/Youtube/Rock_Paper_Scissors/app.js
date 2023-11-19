@@ -4,7 +4,7 @@ let score = 0;
       const choices = ['rock', 'paper', 'scissors'];
       const computerChoice = choices[Math.floor(Math.random() * 3)];
 
-      displayChoice('player', playerChoice);
+      displayChoice('Migs', playerChoice);
       displayChoice('computer', computerChoice);
 
       const result = determineWinner(playerChoice, computerChoice);
@@ -17,17 +17,15 @@ let score = 0;
 
     function displayChoice(player, choice) {
       const choiceDiv = document.createElement('div');
-      choiceDiv.textContent = `${player.charAt(0).toUpperCase() + player.slice(1)} chose ${choice}`;
+      choiceDiv.textContent = `${player} chose ${choice}`;
       document.body.appendChild(choiceDiv);
 
-      setTimeout(() => {
-        choiceDiv.remove();
-      }, 3000);
+      setTimeout(() => {choiceDiv.remove()}, 2000);
     }
 
     function determineWinner(playerChoice, computerChoice) {
       if (playerChoice === computerChoice) {
-        return 'It\'s a tie!';
+        return "It\'s a tie!";
       } else if (
         (playerChoice === 'rock' && computerChoice === 'scissors') ||
         (playerChoice === 'paper' && computerChoice === 'rock') ||
@@ -35,7 +33,7 @@ let score = 0;
       ) {
         return 'You win!';
       } else {
-        return 'Computer wins!';
+        return 'You lose!';
       }
     }
 
@@ -43,8 +41,6 @@ let score = 0;
       const scoreDiv = document.getElementById('score');
       if (result.includes('win')) {
         score++;
-      } else if (result.includes('lose')) {
-        score--;
       }
       scoreDiv.textContent = `Score: ${score}`;
     }
