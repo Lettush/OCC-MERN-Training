@@ -1,0 +1,32 @@
+body {
+    border: 1px dashed rgba(10, 171, 96, 0.434);
+}
+
+div {
+    border: 1px dashed rgba(171, 10, 58, 0.434);
+}
+
+#block {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 2px;
+    padding: 2px;
+}
+
+#inline {
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+}
+
+#inline-block {
+    display: inline-block;
+    width: 200px;
+    height: auto;
+    margin: 2px;
+}
+
+#flex {
+    display: flex;
+}
