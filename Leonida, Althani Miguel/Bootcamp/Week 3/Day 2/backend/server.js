@@ -7,13 +7,9 @@ const mongoose = require("mongoose");
 const book_router = require("./routes/book_route");
 const user_router = require("./routes/user_route");
 
+//import CORS for frontend to backend connection
 const cors = require("cors");
 
-const corsOptions = {
-    origin: '*',
-};
-
-app.use(cors(corsOptions));
 
 //start server
 app.listen(3000, () => console.log("Ready to listen in PORT 3000"));
@@ -23,10 +19,10 @@ mongoose.connect("mongodb+srv://test_user:pass@cluster0.snvqjh4.mongodb.net/book
 .then(() => console.log("Database Connection successful"))
 .catch((error) => console.log(error));
 
+app.use(cors({origin: '*',}));
 
 //middleware: converts JSON to JS Object
 app.use(express.json());
-
 
 //middleware: define root path
 app.use('/api/books', book_router);

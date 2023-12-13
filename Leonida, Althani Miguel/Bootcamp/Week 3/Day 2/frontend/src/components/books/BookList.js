@@ -21,7 +21,7 @@ const BookList = () => {
             <ul>
                 {allBooks && allBooks.map((book) => (
                     <li key={book._id}>
-                        <p>Title: {book.title}</p>
+                        <p><strong>Title: {book.title}</strong></p>
                         <p>Author: {book.author}</p>
                         <p>Pages: {book.pages}</p>
                         <p>Price: Php {book.price}</p>
