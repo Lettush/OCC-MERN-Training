@@ -3,14 +3,14 @@ import { useEffect, useState } from "react";
 
 const BookList = () => {
 
-    const [books, setBooks] = useState([]);
+    const [allBooks, setBooks] = useState([]);
 
     useEffect(() => {
-        fetch("api/books")
+        fetch("http://localhost:3000/api/books/")
             .then((response) => response.json())
             .then((data) => {
-                setBooks(data.books);
-                console.log(data);               
+                setBooks(data.allBooks);
+                console.log(data); 
             })
             .catch((error) => console.error(error));
     }, [])
@@ -19,14 +19,12 @@ const BookList = () => {
         <div>
             <h1> Book List </h1>
             <ul>
-                {console.log(books)}
-                {books && books.map((book) => (
+                {allBooks && allBooks.map((book) => (
                     <li key={book._id}>
-                        <p>{book.title}</p>
-                        <p>{book.author}</p>
-                        <p>{book.pages}</p>
-                        <p>{book.genres}</p>
-                        <p>{book.price}</p>
+                        <p>Title: {book.title}</p>
+                        <p>Author: {book.author}</p>
+                        <p>Pages: {book.pages}</p>
+                        <p>Price: Php {book.price}</p>
                     </li>
                 ))}
             </ul>

@@ -9,6 +9,12 @@ const user_router = require("./routes/user_route");
 
 const cors = require("cors");
 
+const corsOptions = {
+    origin: '*',
+};
+
+app.use(cors(corsOptions));
+
 //start server
 app.listen(3000, () => console.log("Ready to listen in PORT 3000"));
 
@@ -21,14 +27,9 @@ mongoose.connect("mongodb+srv://test_user:pass@cluster0.snvqjh4.mongodb.net/book
 //middleware: converts JSON to JS Object
 app.use(express.json());
 
-// const corsOptions = {
-//     origin: 'http://localhost:3001',
-// };
-
-// app.use(cors(corsOptions));
 
 //middleware: define root path
-app.use('/api/books', cors(), book_router);
+app.use('/api/books', book_router);
 
 //middleware: define root path
 app.use('/api/users', user_router);
