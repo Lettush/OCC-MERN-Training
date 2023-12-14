@@ -25,27 +25,27 @@ const BookAdd = () => {
         //prevents website from refreshing
         e.preventDefault();
 
-        try{
+        try {
             const response = await fetch('http://localhost:3000/api/books/', {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json'},
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(bookDetails)
             });
-            
-            if(response.ok) {
+
+            if (response.ok) {
                 console.log(await response.json())
                 setBookDetails({
                     title: "",
                     author: "",
                     pages: "",
                     price: ""
-                })                
+                })
             }
             else {
                 throw new Error("Error Adding Book");
             }
         }
-        catch (error){
+        catch (error) {
             console.error(error);
         }
 
